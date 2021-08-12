@@ -1,0 +1,1 @@
+# smart-jump-kivy-opencv
