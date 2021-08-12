@@ -65,8 +65,7 @@ class GameLayout(FloatLayout):
         ball.y += self.velocidade_y # posição y é acrescentada várias vezes
         self.interval = 5
 
-        if ball.y > ball.height: # se a posição y da bola for maior que a propria altura, a velocidade decai
-            self.velocidade_y -= 1
+        self.velocidade_y -= 1
 
         if ball.y <= 0: # se a posição y da bola for menor ou igual a 0, a velocidade é nula
             self.velocidade_y = 0
