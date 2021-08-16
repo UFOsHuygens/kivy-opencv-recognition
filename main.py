@@ -25,7 +25,7 @@ class GameLayout(FloatLayout):
         Clock.schedule_interval(self.update, 1.0/30.0) # chamada da função update 30x por segundo
         
     def update(self, dt):
-        cascade = cv2.CascadeClassifier("xml/face.xml") # face ou xml
+        cascade = cv2.CascadeClassifier("xml/face.xml") # face ou palm
         ret, img = self.cap.read() # leitura da captura de video chamada 30 vezes por segundo
         imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         objects = cascade.detectMultiScale(imgGray, 1.1, 4)
